@@ -52,10 +52,6 @@ public class WhereHowmuchController implements Initializable {
 		
 	}
 	
-	public void finalize() {
-		System.out.println("finalize");
-	}
-    
     public void addButtonMouseClicked() {
     	System.out.println("addButtonMouseClicked");
 //    	UrlTableContentDialog urlTableContentDialog = 

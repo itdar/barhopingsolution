@@ -6,21 +6,25 @@ import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.SplitPane;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class MainBHS extends Application {
 	private Stage primaryStage;
-    private AnchorPane rootLayout;
+    private AnchorPane rootPane;
     
-    private Stage whereHowmuchStage;
+    private SplitPane vertSplitPane;
+    private SplitPane horzSplitPane;
+    private AnchorPane upperPane;
+    
+//    private Stage whereHowmuchStage = new Stage();
     private Stage whenWhoStage; 
     private Stage resultCalcStage;
 
-    @FXML private BorderPane whereHowmuchBorderPane;
-    @FXML private AnchorPane whenWhoPane;
-    @FXML private AnchorPane resultCalcPane;
+    @FXML private AnchorPane whereHowmuchPane = new AnchorPane();
+//    @FXML private AnchorPane whenWhoPane = new AnchorPane();
+//    @FXML private AnchorPane resultCalcPane;
     
 	public void start(Stage primaryStage) { 
 		this.primaryStage = primaryStage;
@@ -36,9 +40,9 @@ public class MainBHS extends Application {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainBHS.class.getResource("BHS.fxml"));
-            rootLayout = (AnchorPane) loader.load();
+            rootPane = (AnchorPane) loader.load();
             
-            Scene scene = new Scene(rootLayout);
+            Scene scene = new Scene(rootPane);
             primaryStage.setScene(scene);
             primaryStage.show();
             
@@ -51,23 +55,29 @@ public class MainBHS extends Application {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainBHS.class.getResource("wherehowmuch/gui/WhereHowmuch.fxml"));
-            whereHowmuchBorderPane = (BorderPane) loader.load();
-            rootLayout.setTopAnchor(whereHowmuchBorderPane, null);;
-//            whereHowmuchStage.setScene(new Scene(whereHowmuchPane));
-//            whereHowmuchStage.show();
+            whereHowmuchPane = (AnchorPane) loader.load();
+            
+            System.out.println(rootPane.getChildren().size());
+            rootPane.getChildren().add(whereHowmuchPane);
+            System.out.println(rootPane.getChildren().size());
             
 //            whereHowmuchPane.setTopAnchor(whereHowmuchPane, null);
+            
+//            rootLayout.setTopAnchor(whereHowmuchPane, null);
+//            whereHowmuchStage.setScene(new Scene(whereHowmuchPane));
+//            whereHowmuchStage.show();
             
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    
+    /*
     public void showWhenWhoPane() {
         try {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainBHS.class.getResource("whenwho/gui/WhenWho.fxml"));
-            whenWhoPane = (AnchorPane) loader.load();
+            FXMLLoader loader3 = new FXMLLoader();
+            loader3.setLocation(MainBHS.class.getResource("whenwho/gui/WhenWho.fxml"));
+            whenWhoPane = (AnchorPane) loader3.load();
+            rootPane.getChildren().add(whenWhoPane);
             
 //            this.whenWhoPane.setTopAnchor(_whenWhoPane, null);
             
@@ -87,7 +97,7 @@ public class MainBHS extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
     public Stage getPrimaryStage() {
         return primaryStage;
