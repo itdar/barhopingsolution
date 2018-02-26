@@ -48,7 +48,7 @@ public class WhereHowmuchController implements Initializable {
 	
 	
 	public WhereHowmuchController() { // Constructor
-		System.out.println("Constructor");
+		System.out.println("WhereHowmuchController Constructor");
 		
 	}
 	

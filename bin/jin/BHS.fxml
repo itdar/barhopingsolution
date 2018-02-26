@@ -3,21 +3,21 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="536.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="371.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jin.BHSController">
    <children>
-      <SplitPane fx:id="vertSplitPane" dividerPositions="0.5" layoutX="253.0" layoutY="140.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" scaleShape="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.5" layoutX="253.0" layoutY="140.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" scaleShape="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane fx:id="upperPane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <SplitPane fx:id="horzSplitPane" dividerPositions="0.5" layoutX="195.0" layoutY="30.0" prefHeight="204.0" prefWidth="534.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <SplitPane dividerPositions="0.5" layoutX="195.0" layoutY="30.0" prefHeight="204.0" prefWidth="534.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
-                      <AnchorPane fx:id="whereHowmuchPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
-                        <AnchorPane fx:id="whenWhoPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                      <AnchorPane fx:id="whereHowmuchPane" />
+                        <AnchorPane fx:id="whenWhoPane" />
                     </items>
                   </SplitPane>
                </children>
             </AnchorPane>
-          <AnchorPane fx:id="resultPane" minHeight="0.0" minWidth="0.0" prefHeight="173.0" prefWidth="494.0" />
+          <AnchorPane fx:id="resultPane" />
         </items>
       </SplitPane>
    </children>
