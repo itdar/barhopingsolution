@@ -6,33 +6,33 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="whereHowmuchPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jin.wherehowmuch.gui.WhereHowmuchController">
+<AnchorPane fx:id="whereHowmuchPane" prefHeight="163.0" prefWidth="194.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jin.wherehowmuch.gui.WhereHowmuchController">
    <children>
-      <SplitPane dividerPositions="0.7849462365591398" orientation="VERTICAL" prefHeight="389.0" prefWidth="412.0">
+      <SplitPane dividerPositions="0.7849462365591398" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0">
          <items>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <AnchorPane>
                <children>
-                  <TableView fx:id="whereHowmuchTableView" layoutX="13.0" layoutY="95.0" prefHeight="182.0" prefWidth="462.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="whereHowmuchTableView" layoutX="13.0" layoutY="95.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <columns>
-                        <TableColumn fx:id="numberColumn" prefWidth="98.0" text="Number" />
-                        <TableColumn fx:id="whereColumn" minWidth="8.0" prefWidth="180.0" text="Where" />
-                        <TableColumn fx:id="howmuchColumn" minWidth="8.0" prefWidth="183.0" text="How much" />
+                        <TableColumn fx:id="numberColumn" prefWidth="33.0" resizable="false" text="#" />
+                        <TableColumn fx:id="whereColumn" minWidth="8.0" prefWidth="72.0" text="Where" />
+                        <TableColumn fx:id="howmuchColumn" minWidth="8.0" prefWidth="92.0" text="How much" />
                      </columns>
                   </TableView>
                </children>
             </AnchorPane>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <AnchorPane>
                <children>
-                  <SplitPane dividerPositions="0.5" layoutX="101.0" layoutY="11.0" prefHeight="182.0" prefWidth="462.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <SplitPane dividerPositions="0.5" layoutX="101.0" layoutY="11.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <items>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                        <AnchorPane>
                            <children>
-                              <Button fx:id="addButton" mnemonicParsing="false" onMouseClicked="#addButtonMouseClicked" prefHeight="180.0" prefWidth="226.0" text="Add" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Button fx:id="addButton" mnemonicParsing="false" onMouseClicked="#addButtonMouseClicked" text="Add" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                        <AnchorPane>
                            <children>
-                              <Button fx:id="deleteButton" mnemonicParsing="false" onMouseClicked="#deleteButtonMouseClicked" prefHeight="180.0" prefWidth="226.0" text="Delete" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Button fx:id="deleteButton" mnemonicParsing="false" onMouseClicked="#deleteButtonMouseClicked" text="Delete" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                      </items>
