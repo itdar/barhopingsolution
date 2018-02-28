@@ -8,29 +8,29 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jin.whenwho.gui.WhenWhoController">
    <children>
-      <SplitPane dividerPositions="0.7849462365591398" layoutX="152.0" layoutY="124.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.8" orientation="VERTICAL" prefHeight="200.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <AnchorPane>
                <children>
-                  <TableView fx:id="whenWhoTableView" layoutX="13.0" layoutY="95.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="whenWhoTableView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <columns>
-                        <TableColumn fx:id="numberColumn" prefWidth="32.0" text="#" />
-                        <TableColumn fx:id="whenColumn" minWidth="8.0" prefWidth="72.0" text="When" />
-                        <TableColumn fx:id="whoColumn" minWidth="8.0" prefWidth="93.0" text="Who" />
+                        <TableColumn fx:id="numberColumn" text="#" />
+                        <TableColumn fx:id="whenColumn" text="When" />
+                        <TableColumn fx:id="whoColumn" prefWidth="87.0" text="Who" />
                      </columns>
                   </TableView>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <AnchorPane>
                <children>
-                  <SplitPane dividerPositions="0.5" layoutX="101.0" layoutY="11.0" prefHeight="182.0" prefWidth="462.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <SplitPane dividerPositions="0.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                      <AnchorPane>
                            <children>
                               <Button fx:id="addButton" mnemonicParsing="false" onMouseClicked="#addButtonMouseClicked" text="Add" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                      <AnchorPane>
                            <children>
                               <Button fx:id="deleteButton" mnemonicParsing="false" onMouseClicked="#deleteButtonMouseClicked" text="Delete" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
