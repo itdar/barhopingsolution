@@ -3,21 +3,26 @@ package jin.wherehowmuch.gui;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.stage.Stage;
+import jin.wherehowmuch.dialog.WhereHowmuchTableDialog;
+import jin.wherehowmuch.table.WhereHowmuchTableProperty;
 
 public class WhereHowmuchController implements Initializable {
 	@FXML private Button addButton;
 	@FXML private Button deleteButton;
 	@FXML private TableView whereHowmuchTableView;
 	
-//	@FXML private TableView<UrlTableContents> urlTableView;
-//	@FXML private TableColumn<UrlTableContents, String> urlNumberColumn;
-//	@FXML private TableColumn<UrlTableContents, String> nameColumn;
-//	@FXML private TableColumn<UrlTableContents, String> isExistColumn;
-//	private ObservableList<UrlTableContents> urlTableList;
+	@FXML private TableView<WhereHowmuchTableProperty> whTableView;
+	@FXML private TableColumn<WhereHowmuchTableProperty, String> numberColumn;
+	@FXML private TableColumn<WhereHowmuchTableProperty, String> whereColumn;
+	@FXML private TableColumn<WhereHowmuchTableProperty, String> howmuchColumn;
+	private ObservableList<WhereHowmuchTableProperty> whTableViewList;
 	
 	public void initialize(URL arg0, ResourceBundle arg1) {
 //		urlTableList = FXCollections.observableArrayList();
@@ -54,9 +59,10 @@ public class WhereHowmuchController implements Initializable {
 	
     public void addButtonMouseClicked() {
     	System.out.println("addButtonMouseClicked");
-//    	UrlTableContentDialog urlTableContentDialog = 
-//    			new UrlTableContentDialog(new Stage(), urlTableList);
-//    	urlTableContentDialog.addUrlDialog();
+    	WhereHowmuchTableDialog whereHowmuchTableDialog = 
+    			new WhereHowmuchTableDialog(new Stage(), whTableViewList);
+    	whereHowmuchTableDialog.addDialog();
+    	
     }
     
     public void deleteButtonMouseClicked() {

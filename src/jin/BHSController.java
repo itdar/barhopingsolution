@@ -45,7 +45,7 @@ public class BHSController implements Initializable {
             AnchorPane _whenWhoPane = (AnchorPane) loader2.load();
             this.whenWhoPane.getChildren().add(_whenWhoPane);
             
-            System.out.println("showWhereHowmuchPane");
+            System.out.println("showWhenWhoPane");
             
         } catch (IOException e) {
             e.printStackTrace();
@@ -59,7 +59,7 @@ public class BHSController implements Initializable {
             AnchorPane _resultPane = (AnchorPane) loader3.load();
             this.resultPane.getChildren().add(_resultPane);
             
-            System.out.println("showWhereHowmuchPane");
+            System.out.println("showResultPane");
             
         } catch (IOException e) {
             e.printStackTrace();
