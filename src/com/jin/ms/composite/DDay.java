@@ -1,4 +1,7 @@
-package jin.re;
+package com.jin.ms.composite;
+
+import com.jin.ms.visitor.Visitor;
+import com.jin.ms.visitor.Visitor_PrintOut;
 
 public class DDay extends Composite {
 	private String date;
@@ -11,10 +14,14 @@ public class DDay extends Composite {
 		this.date = date;
 	}	
 	
+	@Override
+	public void accept(Visitor visitor) {
+		visitor.visit(this);
+	}
+	
 	public void setDate(String date) {
 		this.date = date;
 	}
-	
 	public String getDate() {
 		return this.date;
 	}
@@ -31,8 +38,10 @@ public class DDay extends Composite {
 		location.add(ohj);
 		location.add(kkw);
 		
+		dDay.add(location);
 		
-		
+		dDay.accept(new Visitor_PrintOut());
 		
 	}
+	
 }

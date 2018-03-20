@@ -1,4 +1,4 @@
-package jin.main;
+package com.jin.ms.main;
 
 public class MainMS {
 	

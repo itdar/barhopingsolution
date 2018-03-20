@@ -1,4 +1,6 @@
-package jin.re;
+package com.jin.ms.composite;
+
+import com.jin.ms.visitor.Visitor;
 
 public class Member extends Component {
 	private int money;
@@ -15,6 +17,10 @@ public class Member extends Component {
 		this.money = money;
 	}
 	
+	@Override
+	public void accept(Visitor visitor) {
+		visitor.visit(this);
+	}
 	
 	public void plusMoney(int money) {
 		this.money += money;
@@ -30,6 +36,5 @@ public class Member extends Component {
 	
 	public void setMoney(int money) {
 		this.money = money;
-	}
-	
+	}	
 }

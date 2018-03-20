@@ -1,4 +1,6 @@
-package jin.re;
+package com.jin.ms.composite;
+
+import com.jin.ms.visitor.Visitor;
 
 public class Location extends Composite {
 	
@@ -12,6 +14,10 @@ public class Location extends Composite {
 		this.money = money;
 	}
 	
+	@Override
+	public void accept(Visitor visitor) {
+		visitor.visit(this);
+	}
 	
 	public void setMoney(int money) {
 		this.money = money;
