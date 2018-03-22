@@ -21,5 +21,13 @@ public class MainMS {
 		dDay.add(location);
 
 		dDay.accept(new Visitor_PrintOut());
+		DDay dDay2 = new DDay(dDay);
+		dDay2.accept(new Visitor_PrintOut());
+		
+		Member tester = new Member("tester");
+		location.add(tester);
+		
+		dDay.accept(new Visitor_PrintOut());
+		dDay2.accept(new Visitor_PrintOut());
 	}
 }

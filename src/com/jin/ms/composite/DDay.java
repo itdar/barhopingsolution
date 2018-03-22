@@ -13,10 +13,22 @@ public class DDay extends Composite {
 		this.name = name;
 		this.date = date;
 	}	
+	public DDay(DDay source) {
+		for (int i = 0; i < source.list.size(); i++) {
+			this.list.add(source.list.get(i).clone());
+		}
+		this.name = source.name;
+		this.date = source.date;
+	}
 	
 	@Override
 	public void accept(Visitor visitor) {
 		visitor.visit(this);
+	}
+	@Override
+	public Component clone() {
+		
+		return new DDay(this);
 	}
 	
 	public void setDate(String date) {
@@ -28,8 +40,15 @@ public class DDay extends Composite {
 	
 	
 //	public static void main(String args[]) {
+//		DDay dDay1 = new DDay("dDay1", "2018-08-29");
+//		DDay dDay2 = new DDay(dDay1);
 //		
+//		System.out.println(dDay1.getName());
+//		System.out.println(dDay2.getName());
 //		
+//		dDay1.setName("dDay3");
+//		System.out.println(dDay1.getName());
+//		System.out.println(dDay2.getName());
 //	}
 	
 }

@@ -13,10 +13,21 @@ public class Location extends Composite {
 		this.name = name;
 		this.money = money;
 	}
+	public Location(Location source) {
+		for (int i = 0; i < source.list.size(); i++) {
+			this.list.add(source.list.get(i).clone());
+		}
+		this.name = source.name;
+		this.money = source.money;
+	}
 	
 	@Override
 	public void accept(Visitor visitor) {
 		visitor.visit(this);
+	}
+	@Override
+	public Location clone() {
+		return new Location(this);
 	}
 	
 	public void setMoney(int money) {

@@ -16,10 +16,18 @@ public class Member extends Component {
 		this.name = name;
 		this.money = money;
 	}
-	
+	public Member(Member source) {
+		this.name = source.name;
+		this.money = source.money;
+	}
+		
 	@Override
 	public void accept(Visitor visitor) {
 		visitor.visit(this);
+	}
+	@Override
+	public Member clone() {
+		return new Member(this);
 	}
 	
 	public void plusMoney(int money) {

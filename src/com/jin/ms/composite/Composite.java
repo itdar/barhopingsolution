@@ -23,6 +23,7 @@ abstract class Composite extends Component {
 		return this.list.get(index);
 	}
 	
+	public abstract Component clone();
 	
 	
 	public void setList(List<Component> list) {

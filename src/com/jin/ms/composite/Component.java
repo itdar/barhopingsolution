@@ -6,6 +6,7 @@ public abstract class Component {
 	protected String name = null;
 	
 	public abstract void accept(Visitor visitor);
+	public abstract Component clone();
 	
 	public String getName() {
 		return this.name;
