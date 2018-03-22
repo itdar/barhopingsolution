@@ -4,6 +4,7 @@ import com.jin.ms.visitor.Visitor;
 
 public class Member extends Component {
 	private int money;
+	// 계좌명 / 은행명 / 전화번호  // 옵션
 	
 	public Member() {
 		this.money = 0;
