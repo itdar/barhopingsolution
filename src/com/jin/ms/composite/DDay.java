@@ -5,16 +5,13 @@ import com.jin.ms.visitor.Visitor_PrintOut;
 
 public class DDay extends Composite {
 	private String date;
-	private Member supervisor;
 	
 	public DDay() {
 		this.date = null;
-		this.supervisor = null;
 	}
 	public DDay(String name, String date) {
 		this.name = name;
 		this.date = date;
-		this.supervisor = null;
 	}
 	public DDay(DDay source) {
 		for (int i = 0; i < source.list.size(); i++) {
@@ -22,7 +19,6 @@ public class DDay extends Composite {
 		}
 		this.name = source.name;
 		this.date = source.date;
-		this.supervisor = source.supervisor;
 	}
 	
 	@Override
@@ -39,12 +35,6 @@ public class DDay extends Composite {
 	}
 	public String getDate() {
 		return this.date;
-	}
-	public void setSupervisor(Member supervisor) {
-		this.supervisor = supervisor;
-	}
-	public Member getSupervisor() {
-		return this.supervisor;
 	}
 	
 	
