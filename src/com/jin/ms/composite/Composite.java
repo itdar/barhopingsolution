@@ -6,7 +6,7 @@ import java.util.List;
 import com.jin.ms.visitor.Visitor;
 
 abstract class Composite extends Component {
-	public List<Component> list = new ArrayList<Component>();
+	protected List<Component> list = new ArrayList<Component>();
 
 	public void add(Component component) {
 		this.list.add(component);
@@ -19,8 +19,16 @@ abstract class Composite extends Component {
 		this.list.remove(index);
 	}
 	
-	public Component getChild(int index) {
+	public Component get(int index) {
 		return this.list.get(index);
+	}
+	public Component get(String name) {
+		for (Component component : this.list) {
+			if (component.getName() == name) {
+				return component;
+			}
+		}
+		return null;
 	}
 	
 	public abstract Component clone();

@@ -21,6 +21,14 @@ public class Location extends Composite {
 		this.money = source.money;
 	}
 	
+	public void distribution() {
+		int share = money / this.getLength();
+		for (int i = 0; i < this.getLength(); i++) {
+			Member member = (Member) this.get(i);
+			member.plusMoney(share);
+		}
+	}
+	
 	@Override
 	public void accept(Visitor visitor) {
 		visitor.visit(this);
@@ -36,5 +44,8 @@ public class Location extends Composite {
 	
 	public int getMoney() {
 		return this.money;
+	}
+	public int getLength() {
+		return this.list.size();
 	}
 }

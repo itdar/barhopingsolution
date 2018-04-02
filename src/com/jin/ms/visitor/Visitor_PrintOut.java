@@ -11,7 +11,7 @@ public class Visitor_PrintOut implements Visitor {
 	public void visit(DDay dDay) {
 		System.out.println(dDay.getName() + " " + dDay.getDate());
 		for (int i = 0; i < dDay.getList().size(); i++) {
-			dDay.getChild(i).accept(this);
+			dDay.get(i).accept(this);
 		}
 	}
 
@@ -19,14 +19,14 @@ public class Visitor_PrintOut implements Visitor {
 	public void visit(Location location) {
 		System.out.println("	" + location.getName() + " " + location.getMoney());
 		for (int i = 0; i < location.getList().size(); i++) {
-			location.getChild(i).accept(this);
+			location.get(i).accept(this);
 		}
 	}
 	
 	@Override
 	public void visit(DayMembers dayMembers) {
 		for (int i = 0; i < dayMembers.getLength(); i++) {
-			dayMembers.list.get(i).accept(this);
+			dayMembers.getList().get(i).accept(this);
 		}		
 	}
 	

@@ -3,7 +3,7 @@ package com.jin.ms.composite;
 import com.jin.ms.visitor.Visitor;
 
 public abstract class Component {
-	protected String name = null;
+	protected String name = "";
 	
 	public abstract void accept(Visitor visitor);
 	public abstract Component clone();
