@@ -1,6 +1,7 @@
 package com.jin.ms.visitor;
 
 import com.jin.ms.composite.DDay;
+import com.jin.ms.composite.DayMembers;
 import com.jin.ms.composite.Location;
 import com.jin.ms.composite.Member;
 
@@ -21,10 +22,18 @@ public class Visitor_PrintOut implements Visitor {
 			location.getChild(i).accept(this);
 		}
 	}
-
+	
+	@Override
+	public void visit(DayMembers dayMembers) {
+		for (int i = 0; i < dayMembers.getLength(); i++) {
+			dayMembers.list.get(i).accept(this);
+		}		
+	}
+	
 	@Override
 	public void visit(Member member) {
 		System.out.println("		" + member.getName() + " " + member.getMoney());
 	}
+
 
 }

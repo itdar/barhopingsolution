@@ -4,8 +4,11 @@ import java.util.HashMap;
 
 import com.jin.ms.composite.Member;
 
+//Need to check Enum class for singleton
 public class AllMember {
-	private HashMap<String, Member> allMember;
+	private static AllMember instance;
+	
+	private HashMap<String, Member> allMember = new HashMap<String, Member>();
 	private int length;
 	
 	public AllMember() {
@@ -16,16 +19,21 @@ public class AllMember {
 		this.length = allMember.size();
 	}
 	
+	public static AllMember loadAllMember() {
+		if (instance == null) {
+			instance = new AllMember();
+		}
+		return instance;
+	}
+	
 	public Member getMember(String name) {
-		if (length > 0) {
-			length--;
-			return this.allMember.get(name);
-		} else return null;
+		return this.allMember.get(name);
 	}
 	public void putMember(Member member) {
 		this.allMember.put(member.getName(), member);
 		this.length++;
 	}
+	// overload putMember(String name)
 	
 	public void setAllMember(HashMap<String, Member> allMember) {
 		this.allMember = allMember;
