@@ -25,8 +25,9 @@ public class Visitor_PrintOut implements Visitor {
 	
 	@Override
 	public void visit(DayMembers dayMembers) {
+		System.out.println("	" + "DayMembers" + " >> " + dayMembers.getLength());
 		for (int i = 0; i < dayMembers.getLength(); i++) {
-			dayMembers.getList().get(i).accept(this);
+			dayMembers.get(i).accept(this);
 		}		
 	}
 	

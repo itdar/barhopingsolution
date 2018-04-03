@@ -1,8 +1,11 @@
 package com.jin.ms.composite;
 
+import java.util.ArrayList;
+
 import com.jin.ms.visitor.Visitor;
 
-public class DayMembers extends Composite {
+public class DayMembers {
+	private ArrayList<Member> list = new ArrayList<Member>();
 	private int length;
 	
 	public DayMembers() {
@@ -19,12 +22,17 @@ public class DayMembers extends Composite {
 		this.list.add(member.clone());
 		this.length++;
 	}
+	public void remove(int index) {
+		this.list.remove(index);
+	}
 	
-	@Override
-	public Component clone() {
+	public Member get(int index) {
+		return this.list.get(index).clone();
+	}
+	
+	public DayMembers clone() {
 		return new DayMembers(this);
 	}
-	@Override
 	public void accept(Visitor visitor) {
 		visitor.visit(this);		
 	}

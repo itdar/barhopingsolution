@@ -4,10 +4,9 @@ import com.jin.ms.visitor.Visitor;
 
 public class Location extends Composite {
 	
-	private int money;
 	
 	public Location() {
-		this.money = 0;
+		
 	}
 	public Location(String name, int money) {
 		this.name = name;
@@ -24,8 +23,7 @@ public class Location extends Composite {
 	public void distribution() {
 		int share = money / this.getLength();
 		for (int i = 0; i < this.getLength(); i++) {
-			Member member = (Member) this.get(i);
-			member.plusMoney(share);
+			((Member) this.get(i)).plusMoney(share);
 		}
 	}
 	

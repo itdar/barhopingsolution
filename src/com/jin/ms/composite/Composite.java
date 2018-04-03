@@ -24,7 +24,7 @@ abstract class Composite extends Component {
 	}
 	public Component get(String name) {
 		for (Component component : this.list) {
-			if (component.getName() == name) {
+			if (component.getName().equals(name)) {
 				return component;
 			}
 		}

@@ -61,15 +61,14 @@ public class MainMS {
 		System.out.println("");
 		//Finish to set DDay /////////////////////////////////////////////////////////////////////
 
-		DayMembers dayMembers = new DayMembers();
-		dayMembers.add(allMember.getMember("ohj"));
-		dayMembers.add(allMember.getMember("kkw"));
-		dayMembers.add(allMember.getMember("kdy"));
-		dayMembers.add(allMember.getMember("bsh"));
+		dDay.members.add(allMember.getMember("ohj"));
+		dDay.members.add(allMember.getMember("kkw"));
+		dDay.members.add(allMember.getMember("kdy"));
+		dDay.members.add(allMember.getMember("bsh"));
 		
-		for (int i = 0; i < dayMembers.getLength(); i++) {
-			System.out.print(dayMembers.getList().get(i).getName());
-			Member test = (Member)(dayMembers.getList().get(i));
+		for (int i = 0; i < dDay.members.getLength(); i++) {
+			System.out.print(dDay.members.get(i).getName());
+			Member test = (Member)(dDay.members.get(i));
 			System.out.println(" " + test.getMoney());
 		}
 		
@@ -80,8 +79,8 @@ public class MainMS {
 		Location location1 = new Location("Dinner with soju", 48700);
 		dDay.add(location1);
 		
-		location1.add(dayMembers.get("ohj"));
-		location1.add(dayMembers.get("kkw"));
+		location1.add(dDay.members.get(0));
+		location1.add(dDay.members.get(1));
 		location1.distribution();
 		
 		System.out.println(location1.getName() + " " + location1.getMoney());
@@ -94,9 +93,9 @@ public class MainMS {
 		Location location2 = new Location("Desert cafe for waiting", 15000);
 		dDay.add(location2);
 		
-		location2.add(dayMembers.get("ohj"));
-		location2.add(dayMembers.get("kkw"));
-		location2.add(dayMembers.get("kdy"));
+		location2.add(dDay.members.get(0));
+		location2.add(dDay.members.get(1));
+		location2.add(dDay.members.get(2));
 		location2.distribution();
 		
 		System.out.println(location2.getName() + " " + location2.getMoney());
@@ -109,10 +108,10 @@ public class MainMS {
 		Location location3 = new Location("All together drinking makguli", 54000);
 		dDay.add(location3);
 		
-		location3.add(dayMembers.get("ohj"));
-		location3.add(dayMembers.get("kkw"));
-		location3.add(dayMembers.get("kdy"));
-		location3.add(dayMembers.get("bsh"));
+		location3.add(dDay.members.get(0));
+		location3.add(dDay.members.get(1));
+		location3.add(dDay.members.get(2));
+		location3.add(dDay.members.get(3));
 		location3.distribution();
 		
 		System.out.println(location3.getName() + " " + location3.getMoney());
@@ -125,9 +124,9 @@ public class MainMS {
 		Location location4 = new Location("My life for Aiur", 38000);
 		dDay.add(location4);
 		
-		location4.add(dayMembers.get("ohj"));
-		location4.add(dayMembers.get("kdy"));
-		location4.add(dayMembers.get("bsh"));
+		location4.add(dDay.members.get(0));
+		location4.add(dDay.members.get(2));
+		location4.add(dDay.members.get(3));
 		location4.distribution();
 		
 		System.out.println(location4.getName() + " " + location4.getMoney());
@@ -144,6 +143,9 @@ public class MainMS {
 		// TODO Each location -> cloned member (need to check supervisor on each round
 		
 		dDay.accept(new Visitor_PrintOut());
+		
+		dDay.members.accept(new Visitor_PrintOut());
+		
 //		DDay dDay2 = new DDay(dDay);
 //		dDay2.accept(new Visitor_PrintOut());
 //		

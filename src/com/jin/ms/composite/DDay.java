@@ -4,12 +4,15 @@ import com.jin.ms.visitor.Visitor;
 import com.jin.ms.visitor.Visitor_PrintOut;
 
 public class DDay extends Composite {
+	public DayMembers members;
 	private String date;
 	
 	public DDay() {
+		this.members = new DayMembers();
 		this.date = null;
 	}
 	public DDay(String name, String date) {
+		this.members = new DayMembers();
 		this.name = name;
 		this.date = date;
 	}
