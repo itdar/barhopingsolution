@@ -1,5 +1,6 @@
 package com.jin.ms.member;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.jin.ms.composite.Member;
@@ -8,15 +9,13 @@ import com.jin.ms.composite.Member;
 public class AllMember {
 	private static AllMember instance;
 	
-	private HashMap<String, Member> allMember = new HashMap<String, Member>();
-	private int length;
+	private ArrayList<Member> list = new ArrayList<Member>();
 	
 	public AllMember() {
-		this.length = 0;
+		
 	}
-	public AllMember(HashMap<String, Member> allMember) {
-		this.allMember = allMember;
-		this.length = allMember.size();
+	public AllMember(ArrayList<Member> list) {
+		this.list = list;
 	}
 	
 	public static AllMember loadAllMember() {
@@ -26,24 +25,22 @@ public class AllMember {
 		return instance;
 	}
 	
-	public Member getMember(String name) {
-		return this.allMember.get(name);
+	public Member getMember(int index) {
+		return this.list.get(index);
 	}
 	public void putMember(Member member) {
-		this.allMember.put(member.getName(), member);
-		this.length++;
+		this.list.add(member);
 	}
 	// overload putMember(String name)
 	
-	public void setAllMember(HashMap<String, Member> allMember) {
-		this.allMember = allMember;
-		this.length = allMember.size();
+	public void setList(ArrayList<Member> list) {
+		this.list = list;
 	}
 	
-	public HashMap<String, Member> getAllMember() {
-		return this.allMember;
+	public ArrayList<Member> getList() {
+		return this.list;
 	}
 	public int getLength() {
-		return this.length;
+		return this.list.size();
 	}
 }

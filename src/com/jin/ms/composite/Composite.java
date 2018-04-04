@@ -22,14 +22,14 @@ abstract class Composite extends Component {
 	public Component get(int index) {
 		return this.list.get(index);
 	}
-	public Component get(String name) {
-		for (Component component : this.list) {
-			if (component.getName().equals(name)) {
-				return component;
-			}
-		}
-		return null;
-	}
+//	public Component get(String name) {
+//		for (Component component : this.list) {
+//			if (component.getName().equals(name)) {
+//				return component;
+//			}
+//		}
+//		return null;
+//	}
 	
 	public abstract Component clone();
 	

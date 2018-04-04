@@ -1,5 +1,8 @@
 package com.jin.ms.composite;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.jin.ms.visitor.Visitor;
 
 public class Location extends Composite {
@@ -21,10 +24,17 @@ public class Location extends Composite {
 	}
 	
 	public void distribution() {
+		List<Component> tempList = new ArrayList<Component>();
+		for (int i = 0; i < this.getLength(); i++) {
+			tempList.add(((Member)this.list.get(i).clone()));
+		}
 		int share = money / this.getLength();
 		for (int i = 0; i < this.getLength(); i++) {
+			// Accumulation -> plusMoney / Each round money -> setMoney
+			((Member)tempList.get(i)).plusMoney(share);
 			((Member) this.get(i)).plusMoney(share);
 		}
+		this.setList(tempList);
 	}
 	
 	@Override

@@ -24,6 +24,16 @@ public class DDay extends Composite {
 		this.date = source.date;
 	}
 	
+	public void distribution() {
+		
+		for (int i = 0; i < this.list.size(); i++) {
+			Location location = (Location)this.list.get(i);
+			for (int j = 0; j < location.list.size(); j++) {
+				Member member = (Member)location.list.get(j);
+			}
+		}
+	}
+	
 	@Override
 	public void accept(Visitor visitor) {
 		visitor.visit(this);

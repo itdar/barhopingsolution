@@ -27,7 +27,7 @@ public class DayMembers {
 	}
 	
 	public Member get(int index) {
-		return this.list.get(index).clone();
+		return this.list.get(index);
 	}
 	
 	public DayMembers clone() {
