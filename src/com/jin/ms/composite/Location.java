@@ -31,7 +31,7 @@ public class Location extends Composite {
 		int share = money / this.getLength();
 		for (int i = 0; i < this.getLength(); i++) {
 			// Accumulation -> plusMoney / Each round money -> setMoney
-			((Member)tempList.get(i)).plusMoney(share);
+			((Member)tempList.get(i)).setMoney(share);
 			((Member) this.get(i)).plusMoney(share);
 		}
 		this.setList(tempList);
