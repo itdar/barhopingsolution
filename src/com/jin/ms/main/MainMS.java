@@ -140,7 +140,7 @@ public class MainMS {
 		System.out.println("");
 		//Finish to make Location //////////////////////////////////////////////////////////////
 		
-		// TODO (need to check supervisor on each round
+		// need to check supervisor on each round
 		
 		dDay.accept(new Visitor_PrintOut());
 		System.out.println("");

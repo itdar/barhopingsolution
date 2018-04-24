@@ -1,4 +1,4 @@
-package jin;
+/*package jin;
 
 import java.io.IOException;
 
@@ -59,3 +59,4 @@ public class MainAppBHS extends Application {
 		System.gc();
 	}
 }
+*/

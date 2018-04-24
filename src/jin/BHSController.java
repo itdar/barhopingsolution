@@ -1,4 +1,4 @@
-package jin;
+/*package jin;
 
 import java.io.IOException;
 import java.net.URL;
@@ -66,3 +66,4 @@ public class BHSController implements Initializable {
         }
     }
 }
+*/
