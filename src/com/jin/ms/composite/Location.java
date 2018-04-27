@@ -23,6 +23,10 @@ public class Location extends Composite {
 		this.money = source.money;
 	}
 	
+	/**
+	 * 기존 DayMembers와 연결된 Member는 Plus해주고 / 연결되어있던 Member들을 
+	 * Clone 해서 따로 해당 차의 나눈 돈을 Set 해주고 Location이 갖도록 저장한다.
+	 */
 	public void distribution() {
 		List<Component> tempList = new ArrayList<Component>();
 		for (int i = 0; i < this.getLength(); i++) {
